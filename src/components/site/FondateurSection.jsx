@@ -123,7 +123,7 @@ function FondateurSection() {
               et même les curieux — autour d’une seule mission : créer, partager et faire
             </Typography>
             <Typography variant="body3" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
-              grandir le numérique dans notre région."
+              grandir le numérique dans notre région.
             </Typography>
 
             <Typography variant="body4" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
