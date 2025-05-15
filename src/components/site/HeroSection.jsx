@@ -1,8 +1,11 @@
+import React, { useState } from 'react';
 import { Box, Typography, Button, Container, Grid, Avatar } from '@mui/material';
 import { motion } from 'framer-motion';
+import InfoModal from './InfoModal'; // Assure-toi que ce chemin est correct
 
 const HeroSection = () => {
   const title = "KARA - DIGITAL".split(" ");
+  const [open, setOpen] = useState(false);
 
   return (
     <Box
@@ -162,21 +165,26 @@ const HeroSection = () => {
                   <Button
                     variant="contained"
                     size="large"
+                    onClick={() => setOpen(true)}
                     sx={{
-                      backgroundColor: '#00D68F',
-                      color: '#fff',
-                      fontWeight: 'bold',
-                      px: 4,
-                      borderRadius: '30px',
-                      textTransform: 'none',
-                      boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                      '&:hover': {
-                        backgroundColor: '#00B378',
-                      },
+                    backgroundColor: '#00D68F',
+                    color: '#fff',
+                    fontWeight: 'bold',
+                    px: 4,
+                    borderRadius: '30px',
+                    textTransform: 'none',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                    backgroundColor: '#00B378',
+                    transform: 'scale(1.05)',
+                    },
                     }}
-                  >
+                    >
                     En savoir plus
-                  </Button>
+                    </Button>
+
+                  <InfoModal open={open} onClose={() => setOpen(false)} />
                 </motion.div>
               </Box>
             </motion.div>
