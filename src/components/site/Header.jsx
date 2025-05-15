@@ -1,6 +1,14 @@
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 
+// Fonction pour scroller jusqu'à une section spécifique
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const Header = () => {
   return (
     <motion.div
@@ -11,7 +19,13 @@ const Header = () => {
       {/* Petite barre colorée en haut */}
       <Box sx={{ height: '6px', backgroundColor: '#00CFCF' }} />
 
-      <AppBar position="fixed" sx={{ background: 'linear-gradient(90deg, #005B5B,rgb(0, 191, 255))', boxShadow: 'none' }}>
+      <AppBar
+        position="fixed"
+        sx={{
+          background: 'linear-gradient(90deg, #005B5B, rgb(0, 191, 255))',
+          boxShadow: 'none',
+        }}
+      >
         <Container maxWidth="lg">
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', py: 1 }}>
             {/* Logo / nom gauche */}
@@ -31,6 +45,7 @@ const Header = () => {
             {/* Liens de navigation */}
             <Box sx={{ display: 'flex', gap: 3 }}>
               <Button
+                onClick={() => scrollToSection('hero')}
                 sx={{
                   color: '#ffffff',
                   fontWeight: 500,
@@ -42,6 +57,7 @@ const Header = () => {
                 Accueil
               </Button>
               <Button
+                onClick={() => scrollToSection('about')}
                 sx={{
                   color: '#ffffff',
                   fontWeight: 500,
@@ -53,6 +69,7 @@ const Header = () => {
                 À propos
               </Button>
               <Button
+                onClick={() => scrollToSection('contact')}
                 sx={{
                   color: '#ffffff',
                   fontWeight: 500,

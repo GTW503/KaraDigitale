@@ -27,6 +27,8 @@ const containerVariants = {
 
 const AboutSection = () => {
   return (
+
+    <section id="about">
     <Box
       sx={{
         minHeight: '100vh',
@@ -137,6 +139,7 @@ const AboutSection = () => {
         </Grid>
       </Container>
     </Box>
+    </section>
   );
 };
 

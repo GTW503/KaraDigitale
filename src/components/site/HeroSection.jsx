@@ -8,6 +8,8 @@ const HeroSection = () => {
   const [open, setOpen] = useState(false);
 
   return (
+
+    <section id="hero"> 
     <Box
       sx={{
         background: 'linear-gradient(90deg, #005B5B,rgb(0, 191, 255))',
@@ -85,6 +87,7 @@ const HeroSection = () => {
                   />
                 </motion.div>
               </Box>
+              
 
               <Box textAlign="center" mt={2}>
                 <Typography variant="body1" sx={{ color: '#fff' }}>
@@ -192,6 +195,7 @@ const HeroSection = () => {
         </Grid>
       </Container>
     </Box>
+    </section>
   );
 };
 

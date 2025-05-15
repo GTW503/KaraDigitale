@@ -28,6 +28,8 @@ const iconVariants = {
 
 const FooterSection = () => {
   return (
+
+    <footer id="contact">
     <Box
       component={motion.footer}
       initial={{ opacity: 0 }}
@@ -163,6 +165,7 @@ const FooterSection = () => {
         </Typography>
       </motion.div>
     </Box>
+    </footer>
   );
 };
 
