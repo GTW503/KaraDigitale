@@ -11,7 +11,7 @@ const Header = () => {
       {/* Petite barre colorée en haut */}
       <Box sx={{ height: '6px', backgroundColor: '#00CFCF' }} />
 
-      <AppBar position="static" sx={{ background: 'linear-gradient(90deg, #005B5B,rgb(0, 191, 255))', boxShadow: 'none' }}>
+      <AppBar position="fixed" sx={{ background: 'linear-gradient(90deg, #005B5B,rgb(0, 191, 255))', boxShadow: 'none' }}>
         <Container maxWidth="lg">
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', py: 1 }}>
             {/* Logo / nom gauche */}
