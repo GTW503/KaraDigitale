@@ -10,28 +10,28 @@ const membres = [
     image: "/images/a.jpg",
   },
   {
-    nom: "Hortense TCHONDA",
-    poste: "Responsable communication.",
-    infos: "+++++++ infos sur elle",
+    nom: "Serge DOTSE",
+    poste: "Responsable marketing.",
+    infos: "+++++++ infos sur lui",
     image: "/images/b.jpg",
   },
   {
-    nom: "Serge DOTSE",
-    poste: "Responsable marketing.",
-    infos: "++++++ infos sur lui",
-    image: "/images/c.jpg",
+    nom: "Hortense TCHONDA",
+    poste: "Responsable communication.",
+    infos: "++++++ infos sur elle",
+    image: "/images/a.jpg",
   },
   {
     nom: "Sanaaou BINIZI",
     poste: "Secrétaire.",
     infos: "++++++ infos sur lui",
-    image: "/images/d.jpg",
+    image: "/images/a.jpg",
   },
   {
     nom: "Nawaaf BAH-TRAORE",
     poste: "Trésorier.",
     infos: "++++++ infos sur lui",
-    image: "/images/e.jpg",
+    image: "/images/a.jpg",
   },
 ];
 
