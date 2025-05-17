@@ -80,6 +80,20 @@ const Header = () => {
               >
                 Contact
               </Button>
+              <Button
+              href="https://chat.whatsapp.com/CSlHNzrstuTKZUPi5jm8vc"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+              color: '#ffffff',
+              fontWeight: 500,
+              fontSize: '1rem',
+              textTransform: 'none',
+              '&:hover': { borderBottom: '2px solid #fff', borderRadius: 0 },
+              }}
+              >
+              Rejoindre KARA-DIGITAL
+              </Button>
             </Box>
           </Toolbar>
         </Container>
