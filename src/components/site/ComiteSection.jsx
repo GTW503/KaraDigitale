@@ -1,41 +1,57 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Box, Card, Grid, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Box, Card, Grid, Typography, Button } from "@mui/material";
 
 const membres = [
   {
     nom: "Bénit EDOUH-SEWA",
-    poste: "Vice président.",
-    infos: "+++++++ infos sur lui",
-    image: "/images/a.jpg",
-  },
-  {
-    nom: "Serge DOTSE",
-    poste: "Responsable marketing.",
-    infos: "+++++++ infos sur lui",
-    image: "/images/b.jpg",
+    poste: "COO (Chief Operating Officer).",
+    infos: "Développeur Full-Stack.",
+    image: "/images/ben.jpg",
+    message:
+      "KaraDigital est une opportunité unique d’élever la jeunesse africaine par la technologie. Rejoignez-nous et transformons le monde ensemble.",
   },
   {
     nom: "Hortense TCHONDA",
-    poste: "Responsable communication.",
-    infos: "++++++ infos sur elle",
-    image: "/images/a.jpg",
+    poste: "CMO (Chief Marketing Officer) .",
+    infos: "🎓 Étudiante en communication à l’Université de Kara",
+    image: "/images/hortence.jpg",
+    message:
+      "Je m'engage aux côtés de la communauté KaraDigital pour valoriser nos talents, partager nos expériences et faire rayonner notre savoir-faire. Rejoignez-nous et construisons ensemble une communauté forte et dynamique !",
   },
   {
-    nom: "Sanaaou BINIZI",
-    poste: "Secrétaire.",
-    infos: "++++++ infos sur lui",
-    image: "/images/a.jpg",
+    nom: "Serge DOTSE",
+    poste: "Marketing Manager.",
+    infos: "🎓 Étudiant en Informatique à l’Université de Kara",
+    image: "/images/se1.jpg",
+    message:
+      "Je crois en la puissance de la collaboration. KaraDigital est notre terrain d'innovation, d’inspiration et de réussite collective.",
   },
   {
     nom: "Nawaaf BAH-TRAORE",
-    poste: "Trésorier.",
-    infos: "++++++ infos sur lui",
-    image: "/images/a.jpg",
+    poste: "CFO (Chief Financial Officer).",
+    infos: "🎓 Étudiant en Informatique à l’Université de Kara",
+    image: "/images/nawwaf1.jpg",
+    message:
+      "Soutenir KaraDigital, c’est soutenir un avenir où la jeunesse devient actrice du changement grâce à la technologie.",
+  },
+  {
+    nom: "Sanaaou BINIZI",
+    poste: "Operations Coordinator .",
+    infos: "🎓 Élève en classe de terminal",
+    image: "/images/binizi.jpg",
+    message:
+      "KaraDigital m’offre une famille ambitieuse, prête à bâtir le futur. Chaque idée compte, chaque voix est entendue.",
   },
 ];
 
 export default function ComiteSection() {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const toggleMessage = (index) => {
+    setSelectedIndex(selectedIndex === index ? null : index);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -53,7 +69,7 @@ export default function ComiteSection() {
         <Typography variant="h3" fontWeight="bold">
           Comités exécutif
         </Typography>
-        <Typography variant="subtitle1">Tech Community Kara</Typography>
+        <Typography variant="subtitle1">KARA DIGITAL</Typography>
       </Box>
 
       <Grid container spacing={6} justifyContent="center">
@@ -117,6 +133,7 @@ export default function ComiteSection() {
                     viewport={{ once: false }}
                   />
                 </Box>
+
                 <Typography variant="h6" fontWeight="bold">
                   {membre.nom}
                 </Typography>
@@ -125,12 +142,68 @@ export default function ComiteSection() {
                 </Typography>
                 <Typography
                   variant="body2"
-                  color="text.secondary"
                   mt={1}
-                  sx={{ color: "#333" }}
+                  sx={{
+                    color: "#333",
+                    maxHeight: 80,
+                    overflowY: "auto",
+                    fontSize: "0.85rem",
+                    textAlign: "justify",
+                    scrollbarWidth: "thin",
+                    "&::-webkit-scrollbar": {
+                      width: "4px",
+                    },
+                    "&::-webkit-scrollbar-thumb": {
+                      backgroundColor: "#ccc",
+                      borderRadius: "2px",
+                    },
+                  }}
                 >
                   {membre.infos}
                 </Typography>
+
+                <Box mt={2}>
+                  <Button
+                    onClick={() => toggleMessage(index)}
+                    variant="outlined"
+                    size="small"
+                    sx={{
+                      color: "#005B5B",
+                      borderColor: "#00B389",
+                      "&:hover": {
+                        borderColor: "#007777",
+                        background: "#e0f7f7",
+                      },
+                    }}
+                  >
+                    {selectedIndex === index ? "Voir moins" : "Voir plus"}
+                  </Button>
+
+                  <AnimatePresence>
+                    {selectedIndex === index && (
+                      <motion.div
+                        key="message"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <Typography
+                          mt={2}
+                          variant="body2"
+                          sx={{
+                            fontStyle: "italic",
+                            fontSize: "0.85rem",
+                            textAlign: "justify",
+                            color: "#444",
+                          }}
+                        >
+                          {membre.message}
+                        </Typography>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </Box>
               </Card>
             </motion.div>
           </Grid>

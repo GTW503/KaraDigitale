@@ -41,7 +41,7 @@ const FooterSection = () => {
         color: "#fff",
         py: { xs: 6, md: 10 },
         px: { xs: 4, md: 10 },
-        mt: 10,
+        mt: 0,
         position: "relative",
         overflow: "hidden",
       }}

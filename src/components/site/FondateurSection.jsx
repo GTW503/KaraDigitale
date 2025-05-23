@@ -17,7 +17,7 @@ function FondateurSection() {
     alignItems: "center",
     justifyContent: "center",
     position: "relative",
-   overflow: "hidden",
+  overflow: "hidden",
     }}
     >
       <Grid container spacing={6} alignItems="center" justifyContent="center">
@@ -36,7 +36,7 @@ function FondateurSection() {
             }}
           >
             <motion.img
-              src="/images/a.jpg"
+              src="/images/1.jpg"
               alt="Décoration"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -111,23 +111,23 @@ function FondateurSection() {
                   variant="body1"
                   sx={{ color: "#0e7490", fontWeight: "bold" }}
                 >
-                  Mr Kevin MEBA — CEO, Développeur d'application & Analyste Programmeur
+                  Mr Kevin Essodom MEBA — CEO, Développeur d'application & Analyste Programmeur
                 </Typography>
               </Card>
             </motion.div>
 
             <Typography variant="body1" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
-              La Tech Community Kara est une occasion unique de rassembler les passionnés
+              La Tech Community Kara Digital est une occasion unique de rassembler les passionnés
             </Typography>
-            <Typography variant="body2" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
-              et même les curieux — autour d’une seule mission : créer, partager et faire
+            <Typography variant="body1" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
+              et même les curieux autour d’une seule mission : créer, partager et faire
             </Typography>
             <Typography variant="body3" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
               grandir le numérique dans notre région.
             </Typography>
 
             <Typography variant="body4" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
-            objectif de la communauté ? Offrir aux jeunes les moyens de transformer 
+            L'objectif de la communauté est d'offrir aux jeunes les moyens de transformer 
             </Typography>
             <Typography variant="body5" sx={{ opacity: 0.95, lineHeight: 1.7 }}>
             leurs idées en projets concrets, à fort impact social et technologique.

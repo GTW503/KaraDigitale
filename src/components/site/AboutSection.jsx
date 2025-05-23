@@ -50,7 +50,7 @@ const AboutSection = () => {
             >
               <motion.div variants={fadeInUp} custom={1}>
                 <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                  Tech community Kara
+                  KARA DIGITAL
                 </Typography>
               </motion.div>
 
